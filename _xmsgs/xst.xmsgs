@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">paddle_1_y</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00001000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">paddle_0_y</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00001000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="new" >All outputs of the instance &lt;<arg fmt="%s" index="1">singleP_module</arg>&gt; of the block &lt;<arg fmt="%s" index="2">singleP</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">main_game</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">receiver_module</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/receiver_state_FSM_FFd9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/baud_cnt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">receiver_module/before</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main_game</arg>&gt;.
+</msg>
+
+</messages>
+

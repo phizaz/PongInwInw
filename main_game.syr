@@ -1,0 +1,477 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.46 secs
+ 
+--> Reading design: main_game.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main_game.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main_game"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-tq144
+
+---- Source Options
+Top Module Name                    : main_game
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "receiver.v" in library work
+Compiling verilog file "main_game.v" in library work
+Module <receiver> compiled
+Module <main_game> compiled
+Module <singleP> compiled
+No errors in compilation
+Analysis of file <"main_game.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main_game> in library <work> with parameters.
+	DEATH0 = "011"
+	DEATH1 = "100"
+	MAP_HEIGHT = "00000000000000000000000000011000"
+	MAP_MIDDLE = "00000000000000000000000000101000"
+	MAP_WIDTH = "00000000000000000000000001010000"
+	MARGIN_TOP = "00000000000000000000000000000001"
+	PADDLE_0_COLUMN = "00000000000000000000000000000110"
+	PADDLE_1_COLUMN = "00000000000000000000000001001010"
+	PADDLE_HEIGHT = "00000000000000000000000000001010"
+	PADDLE_WIDTH = "00000000000000000000000000000010"
+	PLAY = "010"
+	READY = "000"
+	START = "001"
+	TARGET_SCORE = "00000000000000000000000000001010"
+
+Analyzing hierarchy for module <receiver> in library <work> with parameters.
+	baud_rate = "00000000000000011100001000000000"
+	clock_per_bit = "00000000000000000000000011011001"
+	half_clock_per_bit = "00000000000000000000000001101100"
+
+Analyzing hierarchy for module <singleP> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main_game>.
+	DEATH0 = 3'b011
+	DEATH1 = 3'b100
+	MAP_HEIGHT = 32'sb00000000000000000000000000011000
+	MAP_MIDDLE = 32'sb00000000000000000000000000101000
+	MAP_WIDTH = 32'sb00000000000000000000000001010000
+	MARGIN_TOP = 32'sb00000000000000000000000000000001
+	PADDLE_0_COLUMN = 32'sb00000000000000000000000000000110
+	PADDLE_1_COLUMN = 32'sb00000000000000000000000001001010
+	PADDLE_HEIGHT = 32'sb00000000000000000000000000001010
+	PADDLE_WIDTH = 32'sb00000000000000000000000000000010
+	PLAY = 3'b010
+	READY = 3'b000
+	START = 3'b001
+	TARGET_SCORE = 32'sb00000000000000000000000000001010
+Module <main_game> is correct for synthesis.
+ 
+Analyzing module <receiver> in library <work>.
+	baud_rate = 32'sb00000000000000011100001000000000
+	clock_per_bit = 32'sb00000000000000000000000011011001
+	half_clock_per_bit = 32'sb00000000000000000000000001101100
+Module <receiver> is correct for synthesis.
+ 
+Analyzing module <singleP> in library <work>.
+Module <singleP> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <receiver>.
+    Related source file is "receiver.v".
+    Found finite state machine <FSM_0> for signal <receiver_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 11                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 10                                             |
+    | Clock              | baud_clock                (rising_edge)        |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit up counter for signal <baud_cnt>.
+    Found 1-bit xor2 for signal <baud_cnt$xor0000> created at line 89.
+    Found 1-bit register for signal <before>.
+    Found 8-bit register for signal <data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <receiver> synthesized.
+
+
+Synthesizing Unit <singleP>.
+    Related source file is "main_game.v".
+    Found 1-bit register for signal <P>.
+    Found 1-bit register for signal <temp>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <singleP> synthesized.
+
+
+Synthesizing Unit <main_game>.
+    Related source file is "main_game.v".
+WARNING:Xst:653 - Signal <paddle_1_y> is used but never assigned. This sourceless signal will be automatically connected to value 00001000.
+WARNING:Xst:653 - Signal <paddle_0_y> is used but never assigned. This sourceless signal will be automatically connected to value 00001000.
+    Found finite state machine <FSM_1> for signal <pstate>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <$sub0000> created at line 183.
+    Found 10-bit subtractor for signal <$sub0001> created at line 188.
+    Found 8-bit adder carry out for signal <add0000$addsub0000> created at line 185.
+    Found 8-bit adder carry out for signal <add0001$addsub0000> created at line 197.
+    Found 23-bit up counter for signal <ball_counter>.
+    Found 8-bit updown counter for signal <ball_x>.
+    Found 8-bit updown counter for signal <ball_y>.
+    Found 1-bit register for signal <direction_x>.
+    Found 1-bit register for signal <direction_y>.
+    Found 8-bit updown counter for signal <paddle_0_x>.
+    Found 8-bit adder carry out for signal <paddle_0_x$addsub0001> created at line 47.
+    Found 8-bit comparator greater for signal <paddle_0_x$cmp_gt0000> created at line 43.
+    Found 9-bit comparator less for signal <paddle_0_x$cmp_lt0000> created at line 47.
+    Found 8-bit down counter for signal <paddle_1_x>.
+    Found 8-bit adder for signal <paddle_1_x$add0000> created at line 65.
+    Found 8-bit adder carry out for signal <paddle_1_x$addsub0000> created at line 64.
+    Found 8-bit comparator greater for signal <paddle_1_x$cmp_gt0000> created at line 60.
+    Found 9-bit comparator less for signal <paddle_1_x$cmp_lt0000> created at line 64.
+    Found 8-bit adder carry out for signal <pstate$addsub0002> created at line 195.
+    Found 4-bit adder carry out for signal <pstate$addsub0003> created at line 215.
+    Found 4-bit adder carry out for signal <pstate$addsub0004> created at line 209.
+    Found 9-bit comparator greatequal for signal <pstate$cmp_ge0000> created at line 195.
+    Found 8-bit comparator greatequal for signal <reflect_x$cmp_ge0000> created at line 185.
+    Found 9-bit comparator less for signal <reflect_x$cmp_lt0000> created at line 185.
+    Found 8-bit adder carry out for signal <reflect_y$addsub0001> created at line 189.
+    Found 4-bit up counter for signal <score_0>.
+    Found 4-bit up counter for signal <score_1>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   7 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <main_game> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 11
+ 10-bit subtractor                                     : 2
+ 4-bit adder carry out                                 : 2
+ 8-bit adder                                           : 1
+ 8-bit adder carry out                                 : 6
+# Counters                                             : 8
+ 12-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 8-bit down counter                                    : 1
+ 8-bit updown counter                                  : 3
+# Registers                                            : 13
+ 1-bit register                                        : 13
+# Comparators                                          : 7
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator greater                              : 2
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator less                                 : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <pstate/FSM> on signal <pstate[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <receiver_module/receiver_state/FSM> on signal <receiver_state[1:10]> with one-hot encoding.
+---------------------
+ State | Encoding
+---------------------
+ 0000  | 0000000001
+ 0001  | 0000000010
+ 0010  | 0000000100
+ 0011  | 0000001000
+ 0100  | 0000010000
+ 0101  | 0000100000
+ 0110  | 0001000000
+ 0111  | 0010000000
+ 1000  | 0100000000
+ 1001  | 1000000000
+---------------------
+WARNING:Xst:524 - All outputs of the instance <singleP_module> of the block <singleP> are unconnected in block <main_game>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:1290 - Hierarchical block <receiver_module> is unconnected in block <main_game>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Counters                                             : 1
+ 12-bit up counter                                     : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main_game> ...
+
+Optimizing unit <receiver> ...
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd1> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd2> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd3> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd4> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd5> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd6> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd7> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd8> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd10> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/receiver_state_FSM_FFd9> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_10> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_9> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_11> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_8> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_7> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_6> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_5> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_3> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_2> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_4> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_1> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/baud_cnt_0> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_6> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_5> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_7> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_3> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_2> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_4> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_0> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/data_1> of sequential type is unconnected in block <main_game>.
+WARNING:Xst:2677 - Node <receiver_module/before> of sequential type is unconnected in block <main_game>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main_game, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main_game.ngr
+Top Level Output File Name         : main_game
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200tq144-4 
+
+ Number of Slices:                        0  out of   1920     0%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   0  out of     97     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.22 secs
+ 
+--> 
+
+Total memory usage is 200224 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "H:/FPGA_PONG/mapper.xst" -ofn "H:/FPGA_PONG/mapper.syr" 
+xst -intstyle ise -ifn "H:/FPGA_PONG/mapper.xst" -ofn "H:/FPGA_PONG/mapper.syr" 
+xst -intstyle ise -ifn "H:/FPGA_PONG/mapper.xst" -ofn "H:/FPGA_PONG/mapper.syr" 
+xst -intstyle ise -ifn "H:/FPGA_PONG/mapper.xst" -ofn "H:/FPGA_PONG/mapper.syr" 
