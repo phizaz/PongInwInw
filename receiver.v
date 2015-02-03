@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    02:10:04 03/08/2014 
+// Create Date:    15:05:54 03/08/2014 
 // Design Name: 
 // Module Name:    receiver 
 // Project Name: 
@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module receiver(
 		input clock,
-		input in,
-		output received,
+		input in, // INPUT FROM RX
+		output received, // RECEIVED DATA SIGNAL
 		output [7:0] received_data
     );
 	 
-	parameter baud_rate = 115200,
-			  clock_per_bit = 217,
-			  half_clock_per_bit = 108;
+	parameter baud_rate = 460800,
+			    clock_per_bit = 54,
+			    half_clock_per_bit = 27;
 
 	reg [7:0] data;
 	assign received_data = data;
